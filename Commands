@@ -1,0 +1,6 @@
+pip install fastapi uvicorn joblib scikit-learn
+
+uvicorn app:app --reload
+
+If any error is thrown in TERMINAL , then
+Just download the missing package shown in TERMINAL.
