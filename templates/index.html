@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Text Detector</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        textarea { width: 100%; height: 150px; margin-bottom: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+        .result { margin-top: 20px; font-weight: bold; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h2>AI Text Detector</h2>
+    <form method="post" action="/predict">
+        <textarea name="text" placeholder="Paste your text here...">{{ text or '' }}</textarea><br>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if prediction is not none %}
+        <div class="result">
+            Prediction: {{ prediction }}
+        </div>
+    {% endif %}
+</body>
+</html>
